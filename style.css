@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+  height: 80vh;
+}
+
+.container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.forImg {
+  background: no-repeat url('images/drawers.jpg');
+  background-position: center -17px;
+  background-size: cover;
+  height: 233px;
+  margin-top: 3rem;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0;
+}
+
+.forHeadingPara {
+  margin: 2rem;
+}
+
+.forHeadingPara h1 {
+  font-weight: 900;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.1rem;
+}
+
+.forHeadingPara p {
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: 500;
+  font-size: 0.91rem;
+  margin-top: 1rem;
+}
+
+.pictureImg img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.forPicture {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: var(--Grayish-Blue);
+  padding: 0.6rem 0;
+  margin: 0 2rem;
+  position: relative;
+}
+
+.forDesktop {
+  display: flex;
+}
+.forName {
+  margin-left: 1rem;
+}
+
+.forName .firstPara {
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.forName .secondPara {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--Grayish-Blue);
+}
+
+.forShare, .imgActive, .desktopImgActive {
+  display: inline-block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+}
+
+.forShare {
+  top: 1.2rem;
+  right: 0.5rem;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.imgActive {
+  top: 1rem;
+  right: 2.5rem;
+  background-color: var(--Desaturated-Dark-Blue);
+}
+
+.imgActive img {
+  filter: grayscale(100%) contrast(0%) brightness(200%);
+}
+
+.forSocial {
+  position: relative;
+  color: var(--Grayish-Blue);
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 1.2rem 2rem;
+  border-radius: 0 0 7px 7px;
+  margin-top: -4rem;
+  visibility: hidden;
+}
+
+.forClick {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.forClick p {
+  letter-spacing: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: -0.4rem;
+}
+
+.shareSociallink {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+@media only screen and  (min-width: 750px){
+ 
+  .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    width: 810px;
+    height: 310px;
+    margin: 5rem auto;
+  }
+
+  .forImg {
+    width: 100%;
+    background-position: 0px 0px;
+    background-size: cover;
+    height: 310px;
+    margin-top: 0;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .mainContainer {
+    height: 310px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .forHeadingPara {
+    padding: 2rem 0;
+    margin: 0 2rem;
+  }
+  
+  .forHeadingPara h1 {
+    font-size: 1.4rem;
+  }
+  
+  .forPicture{
+   padding: 0;
+  }
+
+  .forClick {
+    display: none;
+  }
+  
+  .forSocial {
+    width: 230px;
+    position: relative;
+    margin-top: -7rem;
+    left: 17.9rem;
+    border-radius: 7px;
+    padding: 0.5rem;
+  }
+
+  .forDesktopClick {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    position: relative;
+  }
+
+  .shareSociallink {
+    display: float;
+    z-index: 0;
+  }
+
+  .shareSociallink::after {
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    z-index: -1;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 1.5rem;
+    right: 5.8rem;
+  }
+
+  .forShare {
+    top: 0rem;
+    right: 2rem;
+  }
+
+  .desktopImgActive {
+    top: 4rem;
+    right: 6rem;
+  }
+}
